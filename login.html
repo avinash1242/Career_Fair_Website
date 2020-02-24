@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
     <title>Login</title>
 </head>
 <body>
-    <div>
-        <div></div>
-        <div>
+    <div id="login_page">
+        <header class="login_items login_header">
+            <!-- <div id='login_icon'>
+                <img src="images/psu_signin_logo.png">
+            </div> -->
+            Portland <br>
+                State <br>
+                University
+        </header>
+        <div class="login_items">
             <form>
                 <div>
                     <div>
-                        <i class="fas fa-user"></i>
-                        <input type="text" placeholder="PSU Email ID" name="email" required>
+                        <label for="email">Email</label>
+                        <input type="text" name="email" required>
                     </div>
                     <div>
-                        <i class="fas fa-unlock-alt"></i>
-                        <input type="password" placeholder="Password" name="password" required>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" required>
                     </div>
                     <div>
                         <button type="submit" name="submit" id="submit">Sign In</button>
