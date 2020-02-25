@@ -78,19 +78,11 @@ form {
 @media (min-width: 992px) {
     form > div > input {
         width: 100%;
-        padding: 0.5em;
-        border-style: thin solid #464646;
-        /* border-radius: 4px; */
     }
 
     form > div > button  {
-        padding: 10px;
-        background-color: #6a7f10;
-        color: white;
+        padding: 10px;     
         font-size: 18px;
-        border-radius: 4px;
-        border-style: none;
-        cursor: pointer;
     }
 }
 
@@ -102,21 +94,33 @@ form {
 
     form > div > input {
         margin: 0.5em;
-        padding: 0.5em;
-        border-style: thin solid #464646;
     }
 
     form > div > button  {
         margin: 0.5em;
         padding: 0.5em;
         width: 70px;
-        background-color: #6a7f10;
-        color: white;
         font-size: 13px;
-        border-radius: 4px;
-        border-style: none;
-        cursor: pointer;
     }
+}
+
+form > div > input {
+    padding: 0.5em;
+    border-style: thin solid #464646;
+}
+
+form > div > button {
+    background-color: #6a7f10;
+    color: white;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+}
+
+form > div > input:hover {
+    border-style: solid;
+    border-width: 2px;
+    border-color: #464646;
 }
 
 form > div > button:hover {
