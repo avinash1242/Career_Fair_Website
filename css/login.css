@@ -3,31 +3,112 @@ body {
     box-sizing: border-box;
 }
 
-#login_page {
-    width: 40%;
-    margin: 50px auto;
-    display: grid;
-    grid-template-columns: 40% auto;
-    border-radius: 10px;
-    box-shadow: 3px 3px 40px #ccc;
+@media (min-width: 992px) {
+    #login_page {
+        width: 40%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: 40% auto;
+        border-radius: 10px;
+        box-shadow: 3px 3px 40px #ccc;
+    }
 }
 
-.login_items {
-    padding: 30px;
+@media (max-width: 991.98px) {
+    #login_page {
+        width: 70%;
+        height: 70%;
+        margin: 50px auto;
+        display: grid;
+        grid-template-rows: 20% auto;
+        border-radius: 10px;
+        box-shadow: 3px 3px 40px #ccc;
+    }
 }
 
-.login_header {
-    background-color: #6a7f10;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    display: flex;
-    flex-direction: row;
-    color: white;
-    font-size: 1.5em;
+@media (min-width: 992px) {
+    .login_items {
+        padding: 30px;
+    }
 }
 
-header > div {
+@media (max-width: 991.98px) {
+    .login_items{
+        padding: 0.5em;
+    }
+}
+
+/*--------------------PSU TITLE HEADER-------------*/
+
+@media (min-width: 992px) {
+    .login_header {
+        background-color: #6a7f10;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: white;
+        font-size: 2.5vw;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .login_header{
+        background-color: #6a7f10;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        color: white;
+        text-align: center;
+    }
+}
+
+/* header > div {
     color: white;
     font-weight: 1.2em;
     text-align: right;
+} */
+
+/*------------------LOGIN FORM-------------------*/
+
+form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
 }
+
+@media (min-width: 992px) {
+    form > div > input {
+        width: 100%;
+        padding: 0.5em;
+        border-style: thin solid #464646;
+        /* border-radius: 4px; */
+    }
+}
+
+@media (max-width: 991.98px) {
+    form > div {
+        display: flex;
+        flex-direction: column;
+    }
+    form > div > input {
+        margin: 0.5em;
+        padding: 0.5em;
+        border-style: thin solid #464646;
+    }
+}
+
+
+form > div > button  {
+    padding: 10px;
+    background-color: #6a7f10;
+    color: white;
+    font-size: 18px;
+    border-radius: 4px;
+    border-style: none;
+    cursor: pointer;
+}
+
+form > div > button:hover {
+    background-color: #464646;
+}
+
+/*-----------------------------------------------*/
