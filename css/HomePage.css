@@ -1,0 +1,44 @@
+body {
+    font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #6a7f10;
+  padding: 10px 15px;
+}
+
+.header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 1em; 
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+.header a.logo {
+        font-size: 1.6em;
+}
+
+.header a:hover {
+  background-color: #464646;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
