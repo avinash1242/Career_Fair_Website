@@ -1,0 +1,22 @@
+{
+  "name": "career_fair_website",
+  "version": "1.0.0",
+  "description": "online interactive map for PSU Career Fair held at SMSU ballroom",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvinashVCherukuri/Career_Fair_Website.git"
+  },
+  "author": "Avinash and Deepa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvinashVCherukuri/Career_Fair_Website/issues"
+  },
+  "homepage": "https://github.com/AvinashVCherukuri/Career_Fair_Website#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
