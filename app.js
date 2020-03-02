@@ -13,11 +13,13 @@ const PORT = process.env.PORT || 5000;
 const url = process.env.MONGODB_URI;
 
 //Middleware to run when any call is made
-//static for accessing html/css/image files inside public folder
-app.use(express.static(path.join(__dirname, "/public")));
-//body-parser to read user input
-app.use(bodyParser.json());
+app.use(express.static(path.join(__dirname, "/public"))); //static for accessing html/css/image files inside public folder
+app.use(bodyParser.json()); //body-parser to read user input
 app.use(bodyParser.urlencoded({ extended: false }));
+
+//Set view engine to pug
+app.set("views", "./views");
+app.set("view engine", "ejs");
 
 //HOME page--------------------------------------------------------------------------------
 app.get("/", (req, res) => {
@@ -60,15 +62,18 @@ app.post("/submit", (req, res) => {
 
 //CFAIR MAP page-----------------------------------------------------------------------------
 app.get("/cfairmap", (req, res) => {
-  // MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
-  //   if (err) throw err;
-  //   client
-  //     .db("cfairdb")
-  //     .collection("users")
-  //     .find()
-  //     .each((err, doc) => {
-  //     });
   //connect to Database.companies and get the list of companies
+  MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
+    if (err) throw err;
+    client
+      .db("cfairdb")
+      .collection("companies")
+      .find()
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.render("cfairmap.ejs", { companies: result });
+      });
+  });
 });
 
 app.listen(PORT, () => {
