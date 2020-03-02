@@ -1,35 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+    />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <div id="login_page">
-        <header class="login_items login_header">
-            <!-- <div id='login_icon'>
+      <header class="login_items login_header">
+        <!-- <div id='login_icon'>
                 <img src="images/psu_signin_logo.png">
             </div> -->
-            Portland State University
-        </header>
-        <div class="login_items">
-            <form>
-                <div>
-                    <label for="email"><div class="login_form_title">Email</div></label>
-                    <input type="text" name="email" required>
-                </div>
-                <div>
-                    <label for="password"><div class="login_form_title">Password</div></label>
-                    <input type="password" name="password" required>
-                </div>
-                <div>
-                    <button type="submit" name="submit" id="submit">Sign In</button>
-                </div>
-            </form>
-        </div>
+        Portland State University
+      </header>
+      <div class="login_items">
+        <form action="/submit" method="POST">
+          <div>
+            <label for="email">
+              <div class="login_form_title">Email</div>
+            </label>
+            <input type="text" name="email" id="email" required />
+          </div>
+          <div>
+            <label for="password">
+              <div class="login_form_title">Password</div>
+            </label>
+            <input type="password" name="password" id="password" required />
+          </div>
+          <div>
+            <button type="submit" name="submit" id="submit">Sign In</button>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
-</html> 
+  </body>
+</html>
