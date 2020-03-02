@@ -10,17 +10,18 @@ const PORT = process.env.PORT || 5000;
 app.use(express.static(path.join(__dirname, "/public")));
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/HomePage.html");
+  res.sendFile(path.join(__dirname, "/public/HomePage.html"));
 });
 
 app.get("/login", (req, res) => {
-  res.sendFile(__dirname + "public/login.html");
+  res.sendFile(path.join(__dirname, "public/login.html"));
 });
 
 app.post("/submit", (req, res) => {
   //check if user exists in mongodb
   //check if user is admin or user
   //assign necessary variables accordingly
+  //res.redirect('/users/' + req.user.username);
 });
 
 // //resolve request for admin page
@@ -28,11 +29,11 @@ app.post("/submit", (req, res) => {
 
 // });
 
-// //resolve request for cfair map
-// app.get("/cfairmap", (req, res) => {
+//resolve request for cfair map
+app.get("/cfairmap", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/cfairmap.html"));
+});
 
-// });
-
-app.listen(port, () => {
-  console.log(`Server running at http://localhost:${port}`);
+app.listen(PORT, () => {
+  console.log(`Server running at http://localhost:${PORT}`);
 });
