@@ -1,3 +1,41 @@
 #map-container {
   display: grid;
+  grid-template-columns: repeat(8, 12.25%) 2%;
+  grid-template-rows: 1fr 2fr 1fr;
+  border: solid 1px red;
+}
+
+.map-item {
+  background-color: purple;
+  padding: 2px;
+  margin: 2px;
+}
+
+#map-14-20 {
+  grid-column: 2/6;
+}
+
+#map-21-23 {
+  grid-column: 6/8;
+}
+
+#map-stage {
+  grid-column: 9/10;
+  grid-row: 1/-1;
+}
+
+#map-mid {
+  grid-column: 2/8;
+}
+
+#map-3-6 {
+  grid-column: 2/4;
+}
+
+#map-empty {
+  grid-column: 4/6;
+}
+
+#map-31-33 {
+  grid-column: 6/8;
 }
