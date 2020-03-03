@@ -1,0 +1,19 @@
+<div class="comp-block">
+  <% if(companies[11].Employer != "") { %>
+  <span class="comp-span">
+    <%=companies[11].Employer%>
+  </span>
+  <% } else {%>
+  <div class="comp-span">
+    <%=companies[11].Number%>
+  </div>
+  <% } %>
+  <div>
+    <button type="button" id="comp-button<%=companies[11].Number %> ">
+      <i class="fas fa-star"></i>
+    </button>
+  </div>
+</div>
+<div class="comp-block">
+  <%=companies[12].Number%><%= companies[12].Employer%>
+</div>
