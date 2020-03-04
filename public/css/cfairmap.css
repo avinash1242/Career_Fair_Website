@@ -1,3 +1,38 @@
+body {
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  box-sizing: border-box;
+}
+
+/* Header --------------------------------------- */
+header {
+  overflow: hidden;
+  background-color: #6a7f10;
+  padding: 10px 15px;
+  margin-bottom: 0.5em;
+}
+
+header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+header a.logo {
+  font-size: 1.6em;
+}
+
+header a:hover {
+  background-color: #464646;
+  color: white;
+}
+
+/* Map Layout -------------------------------- */
 #map-container {
   display: grid;
   grid-template-columns: repeat(8, 12.25%) 2%;
@@ -9,6 +44,10 @@
   background-color: purple;
   padding: 2px;
   margin: 2px;
+<<<<<<< HEAD
+  display: grid;
+=======
+>>>>>>> master
 }
 
 #map-14-20 {
@@ -38,4 +77,21 @@
 
 #map-31-33 {
   grid-column: 6/8;
+<<<<<<< HEAD
+}
+
+/* Individual company block------------------------- */
+.comp-block {
+  padding: 0.2em;
+  width: 80px;
+  height: 40px;
+  background-color: white;
+  margin: 0.5em;
+  border-radius: 3px;
+}
+
+.comp-block span {
+  word-wrap: break-word;
+=======
+>>>>>>> master
 }
