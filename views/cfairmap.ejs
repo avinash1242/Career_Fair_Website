@@ -17,6 +17,7 @@
     <main>
       <div id="map-container">
         <div id="map-12-13" class="map-item">
+<<<<<<< HEAD
           <div class="comp-block">
             <% if(companies[11].Employer != "") { %>
             <span class="comp-span">
@@ -33,6 +34,17 @@
               </button>
             </div>
           </div>
+=======
+          <% if(companies[11].Employer != "") { %>
+          <div class="comp-block">
+            <%=companies[11].Employer%>
+          </div>
+          <% } else {%>
+          <div class="comp-block">
+            <%=companies[11].Number%>
+          </div>
+          <% } %>
+>>>>>>> master
           <div class="comp-block">
             <%=companies[12].Number%><%= companies[12].Employer%>
           </div>
