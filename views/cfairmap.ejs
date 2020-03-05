@@ -20,7 +20,7 @@
           <div
             class="comp-block"
             id="comp-id-<%=companies[11].Number %>"
-            onclick="compactions(this, '<%=companies[11].Number%>')"
+            onclick="compactions(this, '<%=companies[11].Number%>', '<%=companies[11].Employer%>')"
           >
             <% if(companies[11].Employer != '') { %>
             <span class="comp-span">
@@ -36,24 +36,24 @@
             <!-- Modal content -->
             <div class="modal-content">
               <span class="close">&times;</span>
-              <p>Employer: <%=companies[12].Employer %><br>
+              <p>Employer: <%=companies[11].Employer %><br>
                 Employer Industry: <%=companies[11].EmployerIndustry%> <br>
                 <% var dept = [];
-                    if (companies[12].CEE == "x") { dept.push("CEE")};
-                    if (companies[12].CS == "x") { dept.push("CS")};
-                    if (companies[12].ECE == "x") { dept.push("ECE")};
-                    if (companies[12].ETM == "x") { dept.push("ETM")};
-                    if (companies[12].MME == "x") { dept.push("MME")};
+                    if (companies[11].CEE == "x") { dept.push("CEE")};
+                    if (companies[11].CS == "x") { dept.push("CS")};
+                    if (companies[11].ECE == "x") { dept.push("ECE")};
+                    if (companies[11].ETM == "x") { dept.push("ETM")};
+                    if (companies[11].MME == "x") { dept.push("MME")};
                   %> 
                 Departments: 
                 <ul> 
-                  <% for(var i=0; i<=dept.length; i++ ){ %> 
+                  <% for(var i=0; i<dept.length; i++ ){ %> 
                   <li><%=dept[i]  %> </li>
                   <% } %> 
                 </ul>
-                JobTypes: <%=companies[12].JobTypes %> <br>
-                <%if(companies[12].OPTCPT=="Y") {%>
-                  OPT/CPT: Yes
+                JobTypes: <%=companies[11].JobTypes %> <br>
+                <%if(companies[11].OPTCPT=="Y") {%>
+                  OPT/CPT? Yes
                 <% } %> 
               </p>
             </div>
@@ -61,7 +61,7 @@
             <div
               class="comp-block"
               id="comp-id-<%=companies[12].Number %>"
-              onclick="compactions(this, '<%=companies[12].Number%>')"
+              onclick="compactions(this, '<%=companies[12].Number%>', '<%=companies[11].Employer%>')"
             >
               <%=companies[12].Employer %>
             </div>
@@ -74,7 +74,7 @@
         <div id="map-9-11" class="map-item"></div>
         <div id="map-mid" class="map-item"></div>
         <div id="map-26-28" class="map-item"></div>
-        <div id="map-7-8" class="map-item">MAP BOTTOM LEFT</div>
+        <div id="map-7-8" class="map-item"></div>
         <div id="map-3-6" class="map-item"></div>
         <div id="map-empty" class="map-item"></div>
         <div id="map-31-33" class="map-item"></div>
