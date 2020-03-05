@@ -44,10 +44,7 @@ header a:hover {
   background-color: purple;
   padding: 2px;
   margin: 2px;
-<<<<<<< HEAD
-  display: grid;
-=======
->>>>>>> master
+  display: flex;
 }
 
 #map-14-20 {
@@ -77,7 +74,6 @@ header a:hover {
 
 #map-31-33 {
   grid-column: 6/8;
-<<<<<<< HEAD
 }
 
 /* Individual company block------------------------- */
@@ -85,13 +81,11 @@ header a:hover {
   padding: 0.2em;
   width: 80px;
   height: 40px;
-  background-color: white;
+  background-color: #ffffff;
   margin: 0.5em;
   border-radius: 3px;
 }
 
 .comp-block span {
   word-wrap: break-word;
-=======
->>>>>>> master
 }
