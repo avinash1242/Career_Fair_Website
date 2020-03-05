@@ -19,3 +19,47 @@
 </div>
 
 onclick="colorchange('comp-id-<%=companies[11].Number %>')"
+
+
+<div class="comp-block" id=comp-id-<%=companies[12].Number%> onclick="trial(companies[12])">
+  <%=companies[12].Number%><%= companies[12].Employer%>
+  <div id="myModal-<%=companies[11].Number %>" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Employer: <%=companies[12].Employer %><br>
+         Employer Industry: <%=companies[11].EmployerIndustry%> <br>
+         <% var dept = [];
+            if (companies[12].CEE == "x") { dept.push("CEE")};
+            if (companies[12].CS == "x") { dept.push("CS")};
+            if (companies[12].ECE == "x") { dept.push("ECE")};
+            if (companies[12].ETM == "x") { dept.push("ETM")};
+            if (companies[12].MME == "x") { dept.push("MME")};
+          %> 
+         Departments: <ul> 
+          <% for(var i=0; i<=dept.length; i++ ){ %> 
+          <li><%=dept[i]  %> </li>
+          <% }); %> 
+         </ul>
+         JobTypes: <% =companies[12].JobTypes %> <br>
+         <%if(companies[12].OPT/CPT=="Y") {%>
+          OPT/CPT: Yes
+         <% } %> 
+      </p>
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+if ($(this).css("background-color") == whiteColor) {
+  $(this).css("background-color", "#f9fd0a");
+} else if ($(this).css("background-color") == yellowColor) {
+  $(this).css("background-color", "#c0e908");
+} else {
+  $(this).css("background-color", whiteColor);
+}
