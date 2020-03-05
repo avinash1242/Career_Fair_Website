@@ -17,34 +17,22 @@
     <main>
       <div id="map-container">
         <div id="map-12-13" class="map-item">
-<<<<<<< HEAD
-          <div class="comp-block">
+          <div class="comp-block" id="comp-id-<%=companies[11].Number %>">
             <% if(companies[11].Employer != "") { %>
             <span class="comp-span">
               <%=companies[11].Employer%>
             </span>
             <% } else {%>
-            <div class="comp-span">
+            <span class="comp-span">
               <%=companies[11].Number%>
-            </div>
+            </span>
             <% } %>
-            <div>
-              <button type="button" id="comp-button<%=companies[11].Number %> ">
+            <!-- <div>
+              <button type="button" id="comp-button ">
                 <i class="fas fa-star"></i>
               </button>
-            </div>
+            </div> -->
           </div>
-=======
-          <% if(companies[11].Employer != "") { %>
-          <div class="comp-block">
-            <%=companies[11].Employer%>
-          </div>
-          <% } else {%>
-          <div class="comp-block">
-            <%=companies[11].Number%>
-          </div>
-          <% } %>
->>>>>>> master
           <div class="comp-block">
             <%=companies[12].Number%><%= companies[12].Employer%>
           </div>
@@ -70,6 +58,7 @@
       type="text/javascript"
       src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"
     ></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="cfairmap.js"></script>
   </body>
 </html>
