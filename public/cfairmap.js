@@ -20,7 +20,7 @@ var DELAY = 300;
 var timer = null;
 
 //Function output: Actions to be performed on a single or double click
-function compactions(el, num) {
+function compactions(el, num, name) {
   var compid = "comp-id-" + num;
   var modalid = "modal-id-" + num;
   var modal = document.getElementById(modalid);
@@ -44,6 +44,27 @@ function compactions(el, num) {
     //Action for double click
     el.removeAttribute("data-dblclick");
     modal.style.display = "block";
+    //Knowledge Search API - for company details
+    var service_url = "https://kgsearch.googleapis.com/v1/entities:search";
+    var params = {
+      query: name,
+      limit: 1,
+      indent: true,
+      key: "AIzaSyCGovNGr-UOT1luezbQrAP1gQ46HCLnx68"
+    };
+    $.getJSON(service_url + "?callback=?", params, function(response) {
+      $.each(response.itemListElement, function(i, element) {
+        console.log(element);
+        var text = element["result"]["detailedDescription"]["articleBody"];
+        var link = element["result"]["detailedDescription"]["url"];
+        var image = element["result"]["image"]["contentUrl"];
+        document.querySelector(".modal-content").innerHTML += text + "<br>";
+        document.querySelector(".modal-content").innerHTML += link + "<br><br>";
+        document.querySelector(".modal-content").innerHTML +=
+          '<img src="' + image + '">';
+      });
+    });
+
     span.onclick = function() {
       modal.style.display = "none";
     };
