@@ -17,8 +17,12 @@
     <main>
       <div id="map-container">
         <div id="map-12-13" class="map-item">
-          <div class="comp-block" id="comp-id-<%=companies[11].Number %>">
-            <% if(companies[11].Employer != "") { %>
+          <div
+            class="comp-block"
+            id="comp-id-<%=companies[11].Number %>"
+            onclick="compdesc('comp-id-<%=companies[11].Number %>')"
+          >
+            <% if(companies[11].Employer != '') { %>
             <span class="comp-span">
               <%=companies[11].Employer%>
             </span>
@@ -27,16 +31,14 @@
               <%=companies[11].Number%>
             </span>
             <% } %>
-            <!-- <div>
+          </div>
+          <!-- <div>
               <button type="button" id="comp-button ">
                 <i class="fas fa-star"></i>
               </button>
             </div> -->
-          </div>
-          <div class="comp-block">
-            <%=companies[12].Number%><%= companies[12].Employer%>
-          </div>
         </div>
+
         <div id="map-14-20" class="map-item"></div>
         <div id="map-21-23" class="map-item"></div>
         <div id="map-24-25" class="map-item"></div>
