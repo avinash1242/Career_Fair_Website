@@ -1,20 +1,144 @@
 <!DOCTYPE html>
+
 <html lang="en">
 	<head>
 	    <meta charset="UTF-8">
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    <link rel="stylesheet" href="css/HomePage.css">
-	    <title>Portland State University Career Fairs</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <title>Portland State University Career Connect</title>
 	</head>
 
 	<body>
-		<div class="header">
-		  <a href="#default" class="logo">Portland State University</a>
-		  <div class="header-right">
-		    <a id= "Pages" href="#home">Home</a>
-		    <a id= "Pages" href="login.html">Login</a>
-		    <a id= "Pages" href="https://www.pdx.edu/careers-employment">About</a>
-		  </div>
-		</div>
+		<header class="header">
+		  	<a href="#default" class="logo">Portland State University</a>
+		  	<div class="header-right">
+		    	<a id= "Pages" href="#home">Home</a>
+		    	<a id= "Pages" href="login.html">Login</a>
+		    	<a id= "Pages" href="https://www.pdx.edu/careers-employment">About</a>
+		  	</div>
+		</header>
+
+		<section class= "Carousel">
+			<section class="CarouselShow">
+				<div class="mySlides fade">
+				  	<div class="numbertext">1 of 3</div>
+				  	<img src="Nike.jpg" class="CarouselPicture">
+				  	<div class="CarouselHeading">Nike</div>
+				  	<div class="CarouselDescription">Tech Talk - 2 March, Monday - 3pm to 5pm - Cramer Hall Room 121</div>
+				</div>
+
+				<div class="mySlides fade">
+				  	<div class="numbertext">2 of 3</div>
+				  	<img src="Intel.jpg" class="CarouselPicture">
+				  	<div class="CarouselHeading">Intel</div>
+				  	<div class="CarouselDescription">Career Event - 4 March, Wednesday - 2pm to 4pm -  KMC Room 148</div>
+				</div>
+
+				<div class="mySlides fade">
+				  	<div class="numbertext">3 of 3</div>
+				  	<img src="Daimler.jpg" class="CarouselPicture">
+				  	<div class="CarouselHeading">Daimler</div>
+				  	<div class="CarouselDescription">Resume Help - 17 April, Friday - 3pm to 5pm - FMH Hall Room 112</div>
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</section>
+			</br>
+
+			<div class="PointHolder">
+			  	<span class="Point" onclick="currentSlide(1)"></span> 
+			  	<span class="Point" onclick="currentSlide(2)"></span> 
+			  	<span class="Point" onclick="currentSlide(3)"></span> 
+			</div>
+		</section>
+
+		<section class= "CareerFair">
+			<br>
+			<div class="CareerBlock"> 
+	    		<h4 class= "BlockHeading">All Majors Career and Internship Fair</h4>
+	    		<p class= "BlockDescription">PSU students and alumni of all majors are invited to attend this on-campus recruiting event, which will bring over 80 employers from a variety of industries (government, private sector, nonprofits) together to share information about their organizations and available opportunities.</p>
+	    		<p class= "BlockDate">February 25, 2020 11am - 3pm</p>
+	  		</div>
+	  		<br>
+
+	  		<div class="CareerBlock"> 
+	    		<h4 class= "BlockHeading">Engineering + Technology Career and Internship Fair</h4>
+	    		<p class= "BlockDescription">PSU students and alumni interested in career opportunities in the engineering and technology fields are invited to attend this recruiting event, which will bring together over 50 employers, from both public and private sector, where they will share information about their organizations and available opportunities. </p>
+	    		<p class= "BlockDate">February 26, 2020 11am - 3pm</p>
+	  		</div>
+	  		<br>
+	  	</section>
+
+  		<footer class="footer">
+  			<div class="FooterLinks">
+		   	  <div class="LinksOne">
+		   	  	<ul>
+		   	  		<li><a href="https://www.pdx.edu/careers/internship-information-for-students">Internships</a></li>
+		   	  		<li><a href="https://www.pdx.edu/careers/events">WorkShops</a></li>
+		   	  		<li><a href="https://www.pdx.edu/careers/appointments-drop-in">Appointments</a></li>
+		   	  		<li><a href="https://www.pdx.edu/careers/contact">Contact Us</a></li>	   	  		
+		   	  	</ul>
+		   	  </div>
+		   	  <div class="LinksTwo">
+		   	  	<ul>
+		   	  		<li><a href="https://www.linkedin.com/school/portland-state-university/">LinkedIn</a></li>
+		   	  		<li><a href="https://portlandstate.joinhandshake.com/login">Handshake</a></li>
+		   	  		<li><a href="https://www.indeed.com/q-Pdx-jobs.html">Indeed</a></li>
+		   	  	</ul>
+		   	  </div>
+		   </div>
+
+		   <div class="Credits">
+		   	  <p>All Rights Reserved ( <a class="Network" href="https://www.linkedin.com/in/avinashvarmacherukuri/">Avinash Varma</a> & <a class="Network" href="https://www.linkedin.com/in/deepa-varghese/">Deepa Varghese</a> )</p>
+		   </div>
+  		</footer>  		
+
+		<script>
+			var slideIndex = 1;
+			showSlides(slideIndex);
+
+			function plusSlides(n) 
+			{
+			 	showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) 
+			{
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) 
+			{
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+
+				if (n > slides.length) 
+				{
+					slideIndex = 1
+				}    
+
+				if (n < 1) 
+				{
+					slideIndex = slides.length
+				}
+
+				for (i = 0; i < slides.length; i++) 
+				{
+			  		slides[i].style.display = "none";  
+			  	}
+
+			  	for (i = 0; i < dots.length; i++) 
+			  	{
+			      	dots[i].className = dots[i].className.replace(" active", "");
+			  	}
+
+			  	slides[slideIndex-1].style.display = "block";  
+			  	dots[slideIndex-1].className += " active";
+			}
+		</script>
+
 	</body>
 </html>
