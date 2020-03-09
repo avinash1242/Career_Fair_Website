@@ -4,7 +4,7 @@
 
 .mySlides {
   display: none
-  }
+}
 
 img {
   vertical-align: middle;
@@ -81,6 +81,33 @@ img {
   text-align: center;
 }
 
+/* Bottom right text */
+.CareerBlock {
+  position: relative;
+  height: 200px;
+  width: 1200px;
+  border: 3px solid #222222;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.CareerFair {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.CareerBlock:hover {
+  position: relative;
+  height: 200px;
+  width: 1200px;
+  border: 5px solid #6a7f10;
+  border-radius: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: 3px 3px 40px #ccc;
+}
+
 .BlockHeading {
   font-weight: normal;
   letter-spacing: 2px;
@@ -95,11 +122,22 @@ img {
 .BlockDescription {
   font-weight: normal;
   letter-spacing: 1px;
-  color: #222222;
+  color: #444444;
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
-  bottom: 80px;
+  bottom: 45px;
+  width: 100%;
+}
+
+.BlockDate {
+  font-weight: normal;
+  letter-spacing: 1px;
+  color: #333333;
+  font-size: 17px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
   width: 100%;
 
 }
@@ -171,19 +209,6 @@ body {
     font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
 }
 
-/* Bottom right text */
-.CareerBlock {
-  position: relative;
-  height: 200px;
-  width: 1000px;
-  background-color: white;
-  color: white;
-  border: 3px solid #6a7f10;
-  border-radius: 15px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
 .header {
   position: sticky;
   overflow: hidden;
@@ -221,6 +246,15 @@ body {
   padding: 10px 15px;
 }
 
+.FooterCenter {
+  font-size: 1em;
+}
+
+.Links {
+  font-size: 1em;
+  padding: 12px 15px;
+}
+
 @media screen and (max-width: 500px) {
   .header a {
     float: none;
@@ -230,4 +264,137 @@ body {
   .header-right {
     float: none;
   }
+}
+
+.footer {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50px);
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+  font-size: 10em;
+  color: #fff;
+  text-transform: uppercase;
+  text-shadow: 0 5px 10px rgba(0,0,0,1);
+  mix-blend-mode: overlay;
+  box-shadow: 0 5px 10px rgba(0,0,0,1);
+  text-decoration: none;
+}
+.FooterLinks{
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background:#272727;
+  padding: 20px 0px;
+  
+}
+
+.LinksOne, .LinksTwo {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  margin-top: 10px;
+}
+.LinksOne ul, .LinksTwo ul{
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.LinksOne ul li{
+  display: inline-block;
+  margin: 10px 20px;   
+}
+
+.LinksOne ul li a{
+  text-decoration: none;
+  outline: none;
+  font-size: 12px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.LinksOne ul li a:hover, .LinksTwo ul li a:hover{
+  color:  #6a7f10;
+}
+
+.LinksTwo ul li{
+  display: inline-block;
+  margin: 0px 20px;  
+}
+.LinksTwo ul li a{
+  text-decoration: none;
+  outline: none;
+  font-size: 11px;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.Credits {
+  width: 100%;
+  height: auto;
+  margin: auto;
+  background-color: : #6a7f10;
+  color: white;
+  padding: 5px;
+  font-size: 10px;
+  text-align: center;
+}
+
+.Network a:hover {
+  color: black;
+}
+
+@media(max-width:691px ){
+.LinksTwo ul li a,.LinksOne ul li a{
+  font-size: 16px;
+}
+}
+@media(max-width:604px ){
+.LinksTwo ul li a,.LinksOne ul li a{
+  font-size: 14px;
+}
+.LinksOne ul li{
+  padding: 0px ;
+}
+}
+@media(max-width:559px ){
+
+.LinksTwo ul li a,.LinksOne ul li a{
+  font-size: 13px;
+}
+
+@media(max-width:539px ){
+.LinksTwo ul li a,.LinksOne ul li a{
+  font-size: 11px;
+}
+
+.LinksOne ul li{
+  margin: 5px 20px;
+}
+
+.LinksOne ul li.p1 {
+    padding-top: 10px;
+}
+
+@media(max-width:380px ){
+  .LinksOne ul li,.LinksTwo ul li{
+    display: block;
+    padding: 5px;
+  }
+
+@media(max-width: 375px){
+  .LinksOne ul li.p1 {
+    padding-top: 0px;
+}
 }
