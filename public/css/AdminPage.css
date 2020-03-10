@@ -1,10 +1,8 @@
 body {
-  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
-    Sans-Serif;
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
   box-sizing: border-box;
 }
 
-/* Header --------------------------------------- */
 header {
   overflow: hidden;
   background-color: #6a7f10;
@@ -32,24 +30,24 @@ header a:hover {
   color: white;
 }
 
-/* Map Layout -------------------------------- */
 .FairLayout {
-    display: grid;
-    border: 1px #555555 solid;
-    height: 930px;
-    width:1400px;
-    grid-template: repeat(13, 60px) / repeat(19, 60px);
-    grid-gap: 12px;
+  display: grid;
+  border: 1px #555555 solid;
+  height: 930px;
+  width:1400px;
+  grid-template: repeat(13, 60px) / repeat(19, 60px);
+  grid-gap: 12px;
 }
 
 .Company {
-  display: flex;
   background-color: white;
-  border: 1px solid #333;
-  width: 60px;
-  height: 60px;
-  color: grey;
-  border-radius: 4px;
+  border: 2px solid #333;
+  width: auto;
+  height: auto;
+  color: #222;
+  border-radius: 5px;
+  font-size: 12px;
+  overflow:auto;
 }
 
 .B0 {
@@ -261,43 +259,33 @@ header a:hover {
 }
 
 .B52 {
-  grid-area: 7 / 8 / span 1 / span 1;
-}
-
-.B53 {
-  grid-area: 6 / 8 / span 1 / span 1;
-}
-
-.B54 {
-  grid-area: 5 / 8 / span 1 / span 1;
-}
-
-.B55 {
-  grid-area: 4 / 8 / span 1 / span 1;
-}
-
-.B56 {
-  grid-area: 4 / 7 / span 1 / span 1;
-}
-
-.B57 {
-  grid-area: 5 / 7 / span 1 / span 1;
-}
-
-.B58 {
-  grid-area: 6 / 7 / span 1 / span 1;
-}
-
-.B59 {
   grid-area: 7 / 7 / span 1 / span 1;
 }
 
-/* Individual company block------------------------- */
-.comp-block {
-  padding: 0.2em;
-  width: 80px;
-  height: 40px;
-  background-color: #ffffff;
-  margin: 0.5em;
-  border-radius: 3px;
+.B53 {
+  grid-area: 6 / 7 / span 1 / span 1;
+}
+
+.B54 {
+  grid-area: 5 / 7 / span 1 / span 1;
+}
+
+.B55 {
+  grid-area: 4 / 7 / span 1 / span 1;
+}
+
+.B56 {
+  grid-area: 4 / 6 / span 1 / span 1;
+}
+
+.B57 {
+  grid-area: 5 / 6 / span 1 / span 1;
+}
+
+.B58 {
+  grid-area: 6 / 6 / span 1 / span 1;
+}
+
+.B59 {
+  grid-area: 7 / 6 / span 1 / span 1;
 }
