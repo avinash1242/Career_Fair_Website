@@ -39,19 +39,19 @@ app.post("/submit", (req, res) => {
     client
       .db("cfairdb")
       .collection("users")
-      .findOne({ email: req.body.email }, (err, result) => {
+      .findOne({ email: req.body.email }, (error, result) => {
+        if (error) throw error;
         if (result == null || result.password != req.body.password) {
-          res.redirect(path.join(__dirname, "/public/login.html"));
+          res.sendFile(path.join(__dirname, "/public/login.html"));
         } else {
           if (result.usertype == "user") {
-            res.sendFile(path.join(__dirname, "/public/cfairmap.html"));
+            res.redirect("/cfairmap");
           } else {
-            res.sendFile(path.join(__dirname, "/public/HomePage.html"));
+            res.redirect("/AdminPage");
           }
         }
       });
   });
-  //res.redirect('/users/' + req.user.username);
 });
 
 //ADMIN page--------------------------------------------------------------------------------

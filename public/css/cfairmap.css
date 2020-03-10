@@ -45,6 +45,7 @@ header a:hover {
   padding: 2px;
   margin: 2px;
   display: flex;
+  flex-direction: row;
 }
 
 #map-14-20 {
@@ -96,7 +97,7 @@ header a:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 15em; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -112,10 +113,10 @@ header a:hover {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 50%;
 }
 
-/* The Close Button */
+/* The Close Button
 .close {
   color: #aaaaaa;
   float: right;
@@ -128,4 +129,4 @@ header a:hover {
   color: #000;
   text-decoration: none;
   cursor: pointer;
-}
+} */
