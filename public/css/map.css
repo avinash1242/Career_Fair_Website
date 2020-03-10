@@ -1,0 +1,303 @@
+body {
+  font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma,
+    Sans-Serif;
+  box-sizing: border-box;
+}
+
+/* Header --------------------------------------- */
+header {
+  overflow: hidden;
+  background-color: #6a7f10;
+  padding: 10px 15px;
+  margin-bottom: 0.5em;
+}
+
+header a {
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 25px;
+  border-radius: 5px;
+}
+
+header a.logo {
+  font-size: 1.6em;
+}
+
+header a:hover {
+  background-color: #464646;
+  color: white;
+}
+
+/* Map Layout -------------------------------- */
+.FairLayout {
+    display: grid;
+    border: 1px #555555 solid;
+    height: 930px;
+    width:1400px;
+    grid-template: repeat(13, 60px) / repeat(19, 60px);
+    grid-gap: 12px;
+}
+
+.Company {
+  display: flex;
+  background-color: white;
+  border: 1px solid #333;
+  width: 60px;
+  height: 60px;
+  color: grey;
+  border-radius: 4px;
+}
+
+.B0 {
+  grid-area: 13 / 9 / span 1 / span 1;
+}
+
+.B1 {
+  grid-area: 12 / 9 / span 1 / span 1;
+}
+
+.B2 {
+  grid-area: 11 / 8 / span 1 / span 1;
+}
+
+.B3 {
+  grid-area: 11 / 7 / span 1 / span 1;
+}
+
+.B4 {
+  grid-area: 11 / 6 / span 1 / span 1;
+}
+
+.B5 {
+  grid-area: 11 / 5 / span 1 / span 1;
+}
+
+.B6 {
+  grid-area: 10 / 3 / span 1 / span 1;
+}
+
+.B7 {
+  grid-area: 9 / 2 / span 1 / span 1;
+}
+
+.B8 {
+  grid-area: 7 / 1 / span 1 / span 1;
+}
+
+.B9 {
+  grid-area: 6 / 1 / span 1 / span 1;
+}
+
+.B10 {
+  grid-area: 5 / 1 / span 1 / span 1;
+}
+
+.B11 {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.B12 {
+  grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.B13 {
+  grid-area: 1 / 5 / span 1 / span 1;
+}
+
+.B14 {
+  grid-area: 1 / 6 / span 1 / span 1;
+}
+
+.B15 {
+  grid-area: 1 / 7 / span 1 / span 1;
+}
+
+.B16 {
+  grid-area: 1 / 8 / span 1 / span 1;
+}
+
+.B17 {
+  grid-area: 1 / 9 / span 1 / span 1;
+}
+
+.B18 {
+  grid-area: 1 / 10 / span 1 / span 1;
+}
+
+.B19 {
+  grid-area: 1 / 11 / span 1 / span 1;
+}
+
+.B20 {
+  grid-area: 1 / 12 / span 1 / span 1;
+}
+
+.B21 {
+  grid-area: 1 / 13 / span 1 / span 1;
+}
+
+.B22 {
+  grid-area: 1 / 14 / span 1 / span 1;
+}
+
+.B23 {
+  grid-area: 1 / 15 / span 1 / span 1;
+}
+
+.B24 {
+  grid-area: 2 / 17 / span 1 / span 1;
+}
+
+.B25 {
+  grid-area: 3 / 18 / span 1 / span 1;
+}
+
+.B26 {
+  grid-area: 5 / 19 / span 1 / span 1;
+}
+
+.B27 {
+  grid-area: 6 / 19 / span 1 / span 1;
+}
+
+.B28 {
+  grid-area: 7 / 19 / span 1 / span 1;
+}
+
+.B29 {
+  grid-area: 9 / 18 / span 1 / span 1;
+}
+
+.B30 {
+  grid-area: 10 / 17 / span 1 / span 1;
+}
+
+.B31 {
+  grid-area: 11 / 15 / span 1 / span 1;
+}
+
+.B32 {
+  grid-area: 11 / 14 / span 1 / span 1;
+}
+
+.B33 {
+  grid-area: 11 / 13 / span 1 / span 1;
+}
+
+.B34 {
+  grid-area: 12 / 12 / span 1 / span 1;
+}
+
+.B35 {
+  grid-area: 13 / 12 / span 1 / span 1;
+}
+
+.B36 {
+  grid-area: 7 / 14 / span 1 / span 1;
+}
+
+.B37 {
+  grid-area: 6 / 14 / span 1 / span 1;
+}
+
+.B38 {
+  grid-area: 5 / 14 / span 1 / span 1;
+}
+
+.B39 {
+  grid-area: 4 / 14 / span 1 / span 1;
+}
+
+.B40 {
+  grid-area: 4 / 13 / span 1 / span 1;
+}
+
+.B41 {
+  grid-area: 5 / 13 / span 1 / span 1;
+}
+
+.B42 {
+  grid-area: 6 / 13 / span 1 / span 1;
+}
+
+.B43 {
+  grid-area: 7 / 13 / span 1 / span 1;
+}
+
+.B44 {
+  grid-area: 7 / 11 / span 1 / span 1;
+}
+
+.B45 {
+  grid-area: 6 / 11 / span 1 / span 1;
+}
+
+.B46 {
+  grid-area: 5 / 11 / span 1 / span 1;
+}
+
+.B47 {
+  grid-area: 4 / 11 / span 1 / span 1;
+}
+
+.B48 {
+  grid-area: 4 / 10 / span 1 / span 1;
+}
+
+.B49 {
+  grid-area: 5 / 10 / span 1 / span 1;
+}
+
+.B50 {
+  grid-area: 6 / 10 / span 1 / span 1;
+}
+
+.B51 {
+  grid-area: 7 / 10 / span 1 / span 1;
+}
+
+.B52 {
+  grid-area: 7 / 8 / span 1 / span 1;
+}
+
+.B53 {
+  grid-area: 6 / 8 / span 1 / span 1;
+}
+
+.B54 {
+  grid-area: 5 / 8 / span 1 / span 1;
+}
+
+.B55 {
+  grid-area: 4 / 8 / span 1 / span 1;
+}
+
+.B56 {
+  grid-area: 4 / 7 / span 1 / span 1;
+}
+
+.B57 {
+  grid-area: 5 / 7 / span 1 / span 1;
+}
+
+.B58 {
+  grid-area: 6 / 7 / span 1 / span 1;
+}
+
+.B59 {
+  grid-area: 7 / 7 / span 1 / span 1;
+}
+
+/* Individual company block------------------------- */
+.comp-block {
+  padding: 0.2em;
+  width: 80px;
+  height: 40px;
+  background-color: #ffffff;
+  margin: 0.5em;
+  border-radius: 3px;
+}
