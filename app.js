@@ -55,10 +55,20 @@ app.post("/submit", (req, res) => {
 });
 
 //ADMIN page--------------------------------------------------------------------------------
-//get
-// app.get("/Admin", (req, res) => {
-
-// });
+app.get("/AdminPage", (req, res) => {
+  //connect to Database.companies and get the list of companies
+  MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
+    if (err) throw err;
+    client
+      .db("cfairdb")
+      .collection("companies")
+      .find()
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.render("AdminPage.ejs", { companies: result });
+      });
+  });
+});
 
 //CFAIR MAP page-----------------------------------------------------------------------------
 app.get("/cfairmap", (req, res) => {
