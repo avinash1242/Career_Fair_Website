@@ -20,7 +20,7 @@
           <div
             class="comp-block"
             id="comp-id-<%=companies[i].Number %>"
-            onclick="compactions(this, '<%=companies[i].Number%>', '<%=companies[i].Employer%>')"
+            onclick="compactions(this, '<%=companies[i].Number%>', '<%=companies[i].Employer%>', '<%=GOOGLE_KG_API_KEY%>')"
           >
             <% if(companies[i].Employer != '') { %>
             <span class="comp-span">
