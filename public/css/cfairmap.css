@@ -39,7 +39,7 @@ header a:hover {
   grid-template-rows: 1fr 2fr 1fr; */
   padding: 6px;
   border: 1px #555555 solid;
-  grid-template: repeat(13, 60px) / repeat(19, 85px);
+  grid-template: repeat(13, 60px) / repeat(19, 87px);
   grid-gap: 12px;
 }
 
@@ -54,7 +54,15 @@ header a:hover {
   border-radius: 5px;
   font-size: 12px;
   overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
   padding: 0.2em;
+}
+
+.comp-block::-webkit-scrollbar {
+  /* WebKit */
+  width: 0;
+  height: 0;
 }
 
 .comp-block:hover {
