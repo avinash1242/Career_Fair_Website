@@ -1,5 +1,5 @@
 // Fit variable sized company names inside fixed sized div blocks
-textFit(document.getElementsByClassName("comp-block"));
+// textFit(document.getElementsByClassName("comp-block"));
 
 // Set whiteColor to identify background of company block and set it to yellow on click
 var whiteColor = $("<div/>")

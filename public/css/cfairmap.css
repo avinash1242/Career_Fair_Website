@@ -35,60 +35,271 @@ header a:hover {
 /* Map Layout -------------------------------- */
 #map-container {
   display: grid;
-  grid-template-columns: repeat(8, 12.25%) 2%;
-  grid-template-rows: 1fr 2fr 1fr;
-  border: solid 1px red;
-}
-
-.map-item {
-  background-color: purple;
-  padding: 2px;
-  margin: 2px;
-  display: flex;
-  flex-direction: row;
-}
-
-#map-14-20 {
-  grid-column: 2/6;
-}
-
-#map-21-23 {
-  grid-column: 6/8;
-}
-
-#map-stage {
-  grid-column: 9/10;
-  grid-row: 1/-1;
-}
-
-#map-mid {
-  grid-column: 2/8;
-}
-
-#map-3-6 {
-  grid-column: 2/4;
-}
-
-#map-empty {
-  grid-column: 4/6;
-}
-
-#map-31-33 {
-  grid-column: 6/8;
+  /* grid-template-columns: repeat(8, 12.25%) 2%;
+  grid-template-rows: 1fr 2fr 1fr; */
+  padding: 6px;
+  border: 1px #555555 solid;
+  grid-template: repeat(13, 60px) / repeat(19, 85px);
+  grid-gap: 12px;
 }
 
 /* Individual company block------------------------- */
+
 .comp-block {
+  background-color: white;
+  border: 2px solid #333;
+  width: auto;
+  height: auto;
+  color: #222;
+  border-radius: 5px;
+  font-size: 12px;
+  overflow: auto;
   padding: 0.2em;
-  width: 80px;
-  height: 40px;
-  background-color: #ffffff;
-  margin: 0.5em;
-  border-radius: 3px;
 }
 
-.comp-block span {
-  word-wrap: break-word;
+.comp-block:hover {
+  border: 3px solid #e6e6e6;
+  background-color: #e6e6e6;
+}
+
+#comp-id-1 {
+  grid-area: 13 / 9 / span 1 / span 1;
+}
+
+#comp-id-2 {
+  grid-area: 12 / 9 / span 1 / span 1;
+}
+
+#comp-id-3 {
+  grid-area: 11 / 8 / span 1 / span 1;
+}
+
+#comp-id-4 {
+  grid-area: 11 / 7 / span 1 / span 1;
+}
+
+#comp-id-5 {
+  grid-area: 11 / 6 / span 1 / span 1;
+}
+
+#comp-id-6 {
+  grid-area: 11 / 5 / span 1 / span 1;
+}
+
+#comp-id-7 {
+  grid-area: 10 / 3 / span 1 / span 1;
+}
+
+#comp-id-8 {
+  grid-area: 9 / 2 / span 1 / span 1;
+}
+
+#comp-id-9 {
+  grid-area: 7 / 1 / span 1 / span 1;
+}
+
+#comp-id-10 {
+  grid-area: 6 / 1 / span 1 / span 1;
+}
+
+#comp-id-11 {
+  grid-area: 5 / 1 / span 1 / span 1;
+}
+
+#comp-id-12 {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+#comp-id-13 {
+  grid-area: 2 / 3 / span 1 / span 1;
+}
+
+#comp-id-14 {
+  grid-area: 1 / 5 / span 1 / span 1;
+}
+
+#comp-id-15 {
+  grid-area: 1 / 6 / span 1 / span 1;
+}
+
+#comp-id-16 {
+  grid-area: 1 / 7 / span 1 / span 1;
+}
+
+#comp-id-17 {
+  grid-area: 1 / 8 / span 1 / span 1;
+}
+
+#comp-id-18 {
+  grid-area: 1 / 9 / span 1 / span 1;
+}
+
+#comp-id-19 {
+  grid-area: 1 / 10 / span 1 / span 1;
+}
+
+#comp-id-20 {
+  grid-area: 1 / 11 / span 1 / span 1;
+}
+
+#comp-id-21 {
+  grid-area: 1 / 12 / span 1 / span 1;
+}
+
+#comp-id-22 {
+  grid-area: 1 / 13 / span 1 / span 1;
+}
+
+#comp-id-23 {
+  grid-area: 1 / 14 / span 1 / span 1;
+}
+
+#comp-id-24 {
+  grid-area: 1 / 15 / span 1 / span 1;
+}
+
+#comp-id-25 {
+  grid-area: 2 / 17 / span 1 / span 1;
+}
+
+#comp-id-26 {
+  grid-area: 3 / 18 / span 1 / span 1;
+}
+
+#comp-id-27 {
+  grid-area: 5 / 19 / span 1 / span 1;
+}
+
+#comp-id-28 {
+  grid-area: 6 / 19 / span 1 / span 1;
+}
+
+#comp-id-29 {
+  grid-area: 7 / 19 / span 1 / span 1;
+}
+
+#comp-id-30 {
+  grid-area: 9 / 18 / span 1 / span 1;
+}
+
+#comp-id-31 {
+  grid-area: 10 / 17 / span 1 / span 1;
+}
+
+#comp-id-32 {
+  grid-area: 11 / 15 / span 1 / span 1;
+}
+
+#comp-id-33 {
+  grid-area: 11 / 14 / span 1 / span 1;
+}
+
+#comp-id-34 {
+  grid-area: 11 / 13 / span 1 / span 1;
+}
+
+#comp-id-35 {
+  grid-area: 12 / 12 / span 1 / span 1;
+}
+
+#comp-id-36 {
+  grid-area: 13 / 12 / span 1 / span 1;
+}
+
+#comp-id-37 {
+  grid-area: 7 / 14 / span 1 / span 1;
+}
+
+#comp-id-38 {
+  grid-area: 6 / 14 / span 1 / span 1;
+}
+
+#comp-id-39 {
+  grid-area: 5 / 14 / span 1 / span 1;
+}
+
+#comp-id-40 {
+  grid-area: 4 / 14 / span 1 / span 1;
+}
+
+#comp-id-41 {
+  grid-area: 4 / 13 / span 1 / span 1;
+}
+
+#comp-id-42 {
+  grid-area: 5 / 13 / span 1 / span 1;
+}
+
+#comp-id-43 {
+  grid-area: 6 / 13 / span 1 / span 1;
+}
+
+#comp-id-44 {
+  grid-area: 7 / 13 / span 1 / span 1;
+}
+
+#comp-id-45 {
+  grid-area: 7 / 11 / span 1 / span 1;
+}
+
+#comp-id-46 {
+  grid-area: 6 / 11 / span 1 / span 1;
+}
+
+#comp-id-47 {
+  grid-area: 5 / 11 / span 1 / span 1;
+}
+
+#comp-id-48 {
+  grid-area: 4 / 11 / span 1 / span 1;
+}
+
+#comp-id-49 {
+  grid-area: 4 / 10 / span 1 / span 1;
+}
+
+#comp-id-50 {
+  grid-area: 5 / 10 / span 1 / span 1;
+}
+
+#comp-id-51 {
+  grid-area: 6 / 10 / span 1 / span 1;
+}
+
+#comp-id-52 {
+  grid-area: 7 / 10 / span 1 / span 1;
+}
+
+#comp-id-53 {
+  grid-area: 7 / 7 / span 1 / span 1;
+}
+
+#comp-id-54 {
+  grid-area: 6 / 7 / span 1 / span 1;
+}
+
+#comp-id-55 {
+  grid-area: 5 / 7 / span 1 / span 1;
+}
+
+#comp-id-56 {
+  grid-area: 4 / 7 / span 1 / span 1;
+}
+
+#comp-id-57 {
+  grid-area: 4 / 6 / span 1 / span 1;
+}
+
+#comp-id-58 {
+  grid-area: 5 / 6 / span 1 / span 1;
+}
+
+#comp-id-59 {
+  grid-area: 6 / 6 / span 1 / span 1;
+}
+
+#comp-id-60 {
+  grid-area: 7 / 6 / span 1 / span 1;
 }
 
 /* Modal for each company block----------------------*/
