@@ -89,6 +89,9 @@ function compactions(el, num, name) {
       }
     }
   } else {
-    $("#" + compid).css("background-color", "#E6E6E6");
+    $("#" + compid).css({
+      "background-color": "#E6E6E6",
+      border: "3px solid #e6e6e6"
+    });
   }
 }

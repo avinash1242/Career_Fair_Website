@@ -16,105 +16,6 @@
     </header>
     <main>
       <div id="map-container">
-<<<<<<< HEAD
-        <div id="map-12-13" class="map-item">
-          <% for (var i =11; i <=12;  i++ ) { %>
-            <div
-              class="comp-block"
-              id="comp-id-<%=companies[i].Number %>"
-              onclick="compactions(this, '<%=companies[i].Number%>', '<%=companies[i].Employer%>')"
-            >
-              <% if(companies[i].Employer != '') { %>
-              <span class="comp-span">
-                <%=companies[i].Employer%>
-              </span>            
-              <% } %>
-            </div>
-            <div id="modal-<%=companies[i].Number%>" class="modal">
-              <!-- Modal content -->
-              <div class="modal-content" id="modal-id-<%=companies[i].Number%>">
-                <!-- <span id="close">&times;</span> -->
-                <p>Employer: <%=companies[i].Employer %><br>
-                  Employer Industry: <%=companies[i].EmployerIndustry%> <br>
-                  <% var dept = [];
-                      if (companies[i].CEE == "x") { dept.push("CEE")};
-                      if (companies[i].CS == "x") { dept.push("CS")};
-                      if (companies[i].ECE == "x") { dept.push("ECE")};
-                      if (companies[i].ETM == "x") { dept.push("ETM")};
-                      if (companies[i].MME == "x") { dept.push("MME")};
-                    %> 
-                  Departments: 
-                  <ul> 
-                    <% for(var j=0; j<dept.length; j++ ){ %> 
-                    <li><%=dept[j]  %> </li>
-                    <% } %> 
-                  </ul>
-                  JobTypes: <%=companies[i].JobTypes %> <br>
-                  <%if(companies[i].OPTCPT=="Y") {%>
-                    OPT/CPT? Yes
-                  <% } %> 
-                </p>
-              </div>
-              </div>
-            <% } %>
-        </div>
-
-        <div id="map-14-20" class="map-item">
-          <% for (var i =13; i <=19;  i++ ) { %>
-            <div
-              class="comp-block"
-              id="comp-id-<%=companies[i].Number %>"
-              onclick="compactions(this, '<%=companies[i].Number%>', '<%=companies[i].Employer%>')"
-            >
-              <% if(companies[i].Employer != '') { %>
-              <span class="comp-span">
-                <%=companies[i].Employer%>
-              </span>            
-              <% } %>
-            </div>
-            <div id="modal-<%=companies[i].Number%>" class="modal">
-              <!-- Modal content -->
-              <div class="modal-content" id="modal-id-<%=companies[i].Number%>">
-                <!-- <span id="close">&times;</span> -->
-                <p>Employer: <%=companies[i].Employer %><br>
-                  Employer Industry: <%=companies[i].EmployerIndustry%> <br>
-                  <% var dept = [];
-                      if (companies[i].CEE == "x") { dept.push("CEE")};
-                      if (companies[i].CS == "x") { dept.push("CS")};
-                      if (companies[i].ECE == "x") { dept.push("ECE")};
-                      if (companies[i].ETM == "x") { dept.push("ETM")};
-                      if (companies[i].MME == "x") { dept.push("MME")};
-                    %> 
-                  Departments: 
-                  <ul> 
-                    <% for(var j=0; j<dept.length; j++ ){ %> 
-                    <li><%=dept[j]  %> </li>
-                    <% } %> 
-                  </ul>
-                  JobTypes: <%=companies[i].JobTypes %> <br>
-                  <%if(companies[i].OPTCPT=="Y") {%>
-                    OPT/CPT? Yes
-                  <% } %> 
-                </p>
-              </div>
-              </div>
-            <% } %>
-        </div>
-        <div id="map-21-23" class="map-item"></div>
-        <div id="map-24-25" class="map-item"></div>
-        <div id="map-stage" class="map-item">STAGE</div>
-        <div id="map-9-11" class="map-item"></div>
-        <div id="map-mid" class="map-item"></div>
-        <div id="map-26-28" class="map-item"></div>
-        <div id="map-7-8" class="map-item"></div>
-        <div id="map-3-6" class="map-item"></div>
-        <div id="map-empty" class="map-item"></div>
-        <div id="map-31-33" class="map-item"></div>
-        <div id="map-29-30" class="map-item"></div>
-      </div>
-      <div id="map-entrance">
-        <div id="map-1-2-34-35"></div>
-=======
         <% for (var i =0; i <=58;  i++ ) { %>
           <div
             class="comp-block"
@@ -154,7 +55,6 @@
             </div>
             </div>
           <% } %>
->>>>>>> master
       </div>
     </main>
     <script
