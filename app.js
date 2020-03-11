@@ -32,6 +32,13 @@ app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "public/login.html"));
 });
 
+
+//get
+app.get("/AdminPreview", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/AdminPreview.html"));
+});
+
+
 //post
 app.post("/submit", (req, res) => {
   MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
@@ -46,7 +53,7 @@ app.post("/submit", (req, res) => {
           if (result.usertype == "user") {
             res.sendFile(path.join(__dirname, "/public/cfairmap.html"));
           } else {
-            res.sendFile(path.join(__dirname, "/public/HomePage.html"));
+            res.sendFile(path.join(__dirname, "/public/AdminPage.html"));
           }
         }
       });
@@ -54,7 +61,7 @@ app.post("/submit", (req, res) => {
   //res.redirect('/users/' + req.user.username);
 });
 
-//ADMIN page--------------------------------------------------------------------------------
+//ADMIN Main page--------------------------------------------------------------------------------
 app.get("/AdminPage", (req, res) => {
   //connect to Database.companies and get the list of companies
   MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
@@ -66,6 +73,22 @@ app.get("/AdminPage", (req, res) => {
       .toArray((err, result) => {
         if (err) throw err;
         res.render("AdminPage.ejs", { companies: result });
+      });
+  });
+});
+
+//ADMIN Preview page--------------------------------------------------------------------------------
+app.get("/AdminPreview", (req, res) => {
+  //connect to Database.companies and get the list of companies
+  MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
+    if (err) throw err;
+    client
+      .db("cfairdb")
+      .collection("companies")
+      .find()
+      .toArray((err, result) => {
+        if (err) throw err;
+        res.render("AdminPreview.ejs", { companies: result });
       });
   });
 });
