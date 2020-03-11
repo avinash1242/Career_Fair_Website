@@ -12,6 +12,8 @@ const PORT = process.env.PORT || 5000;
 //url for mongodb connection
 const url = process.env.MONGODB_URI;
 
+const KG_API_KEY = process.env.API_KEY;
+
 //Middleware to run when any call is made
 app.use(express.static(path.join(__dirname, "/public"))); //static for accessing html/css/image files inside public folder
 app.use(bodyParser.json()); //body-parser to read user input
@@ -81,7 +83,10 @@ app.get("/cfairmap", (req, res) => {
       .find()
       .toArray((err, result) => {
         if (err) throw err;
-        res.render("cfairmap.ejs", { companies: result });
+        res.render("cfairmap.ejs", {
+          companies: result,
+          GOOGLE_KG_API_KEY: KG_API_KEY
+        });
       });
   });
 });

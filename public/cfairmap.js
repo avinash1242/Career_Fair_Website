@@ -20,7 +20,7 @@ var DELAY = 300;
 var timer = null;
 
 //Function output: Actions to be performed on a single or double click
-function compactions(el, num, name) {
+function compactions(el, num, name, KG_API_KEY) {
   console.log(name);
   var compid = "comp-id-" + num;
   var modalid = "modal-" + num;
@@ -55,7 +55,7 @@ function compactions(el, num, name) {
           query: name,
           limit: 1,
           indent: true,
-          key: "AIzaSyCGovNGr-UOT1luezbQrAP1gQ46HCLnx68"
+          key: KG_API_KEY
         };
         $.getJSON(service_url + "?callback=?", params, function(response) {
           $.each(response.itemListElement, function(i, element) {
