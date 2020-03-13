@@ -30,6 +30,10 @@ header a:hover {
   color: white;
 }
 
+.header-right {
+  float: right;
+}
+
 .FairLayout {
   display: grid;
   border: 1px #555555 solid;
