@@ -4,11 +4,13 @@ const path = require("path");
 const MongoClient = require("mongodb").MongoClient;
 const bodyParser = require("body-parser");
 
+
 // initialising the app
 const app = express();
 
 //Defining the port
 const PORT = process.env.PORT || 5000;
+
 //url for mongodb connection
 const url = process.env.MONGODB_URI;
 
@@ -57,28 +59,61 @@ app.post("/submit", (req, res) => {
 });
 
 //Uploading File and Submitting
-//var express = require("express");
 var multer  = require('multer');
-//var app = express();
 var UserData;
+var UserDataAddress;
+
 var storage = multer.diskStorage({
   destination: function (req, file, callback) {
     callback(null, './AdminData');
   },
   filename: function (req, file, callback) {
     UserData = file.fieldname + '-' + Date.now() +'.csv';
+    UserDataAddress = './AdminData/' + UserData;
     callback(null, UserData);
     console.log("User file : " + UserData + " Uploaded!");
+
+
+//check from here
+
+    const csvjson = require('csvjson');
+    const readFile = require('fs').readFile;
+
+    readFile(UserDataAddress, 'utf-8', (err, fileContent) => {
+        if(err) {
+          console.log(err);
+          throw new Error(err);
+        }
+
+    const jsonObj = csvjson.toObject(fileContent);
+    console.log(jsonObj);
+      
+    MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
+      if (err) throw err;
+      client
+      .db("cfairdb")
+      .collection("companies")
+      .insertMany(jsonObj, function(err, res) {
+          if (err) throw err;
+          console.log(res.insertedCount+" documents inserted");
+      });
+
+    });
+  
+    });
+
+// Check Ends Here here    
   }
 });
+
 var upload = multer({ storage : storage}).single('userPhoto');
 
 app.post('/api/photo',function(req,res){
   upload(req,res,function(err) {
     if(err) {
-      return res.end("Error! Refresh & Try Again!");
+      return res.end("Error! Please Refresh and Try Again!");
     }
-    res.end("Success! Refresh to See Changes");
+    res.end("Success! Refresh to See Changes!");
   });
 });
 
