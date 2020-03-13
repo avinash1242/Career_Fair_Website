@@ -2,6 +2,7 @@
 // textFit(document.getElementsByClassName("comp-block"));
 
 // Set whiteColor to identify background of company block and set it to yellow on click
+console.log("psucareerfair-javascript");
 var whiteColor = $("<div/>")
   .css({
     "background-color": "#ffffff"
