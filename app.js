@@ -93,9 +93,13 @@ var storage = multer.diskStorage({
       client
       .db("cfairdb")
       .collection("companies")
+      .deleteMany();
+
+      client
+      .db("cfairdb")
+      .collection("companies")
       .insertMany(jsonObj, function(err, res) {
           if (err) throw err;
-          console.log(res.insertedCount+" documents inserted");
         });
 
       });

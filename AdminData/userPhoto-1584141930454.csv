@@ -1,0 +1,61 @@
+Number,Employer,EmployerIndustry,CEE,CS,ECE,ETM,MME,JobTypes,OPTCPT
+1,,,,,,,,,
+2,A,Avinash,,,,,,,
+3,C,,,,,,,,
+4,,Human Resources,x,x,x,x,x,,
+5,D,Electronic & Computer Hardware,,,x,,x,Job,Y
+6,,Computer Networking,,x,x,,,Internship; Job,
+7,E,Manufacturing - Other,,,x,,x,Internship; Job,Y
+8,F,Scientific and Technical Consulting,x,,x,,x,Cooperative Education; Internship; Job,
+9,G,Construction,x,,x,,x,,Y
+10,,Government - Local; State & Federal,x,x,x,x,x,Internship; Job,Y
+11,,Architecture and Planning,x,,x,,x,Internship; Job,
+12,H,Automotive,,x,x,x,x,Internship; Job,
+13,,Civil Engineering,x,,,,,Internship,Y
+14,I,Architecture and Planning,x,,x,,x,Internship; Job,Y
+15,J,,,,,,,,
+16,,,,,,,,,
+17,,Utilities and Renewable Energy,,,x,x,x,Internship; Job,Y
+18,,Civil Engineering,x,,,,,Internship; Job,
+19,K,,,,,,,,
+20,,,,,,,,,
+21,L,,,,,,,,
+22,M,Government - Local; State & Federal,x,,,,,Volunteer; Fellowship; Internship; Job,
+23,N,Government - Local; State & Federal,,x,,x,,,
+24,,,x,x,x,x,x,Internship; Job,
+25,,Scientific and Technical Consulting,x,,x,,x,Internship; Job,
+26,O,Electronic & Computer Hardware,,,x,,,Internship; Job,Y
+27,,Architecture and Planning,x,,,,,Internship; Job,Y
+28,P,Architecture and Planning,x,,x,,x,Cooperative Education; Internship; Job,
+29,,,,,,,,,
+30,Q,Civil Engineering,x,,,,,Job,
+31,R,Internet & Software,,x,,x,,Job,Y
+32,,Internet & Software,,x,x,,,Job,Y
+33,,Defense,x,x,x,x,x,,
+34,,Civil Engineering,x,,,,,Internship; Job,Y
+35,S,Government - Local; State & Federal,x,,x,,x,Internship; Job,Y
+36,,Higher Education,,x,,,,On Campus Student Employment,
+37,,Other Industries,,,,,,,
+38,T,Civil Engineering,,,x,,x,Cooperative Education; Internship; Job,
+39,,,,,,,,,
+40,,,,,,,,,
+41,,CPG - Consumer Packaged Goods,,,,,x,,
+42,U,Internet & Software,,x,x,,,Internship; Job,
+43,,Internet & Software,,x,,,,,
+44,,Civil Engineering,x,,,,,Job,
+45,,Other Industries,,,,,x,Job,
+46,V,Internet & Software,,x,x,,,Internship; Job,Y
+47,,Electronic & Computer Hardware,,,x,,x,Internship; Job,Y
+48,W,,,,,,,,
+49,,Manufacturing - Other,,,,,,Internship,
+50,X,Construction,x,,,,,Internship; Job,
+51,,Utilities and Renewable Energy,x,,x,,x,Internship; Job,
+52,Y,Internet & Software,,x,x,x,,Internship; Job,Y
+53,,Civil Engineering,x,,,,,Job,
+54,,,,,,,,,
+55,,Government - Local; State & Federal,x,,,,x,Internship; Job,Y
+56,,Social Assistance,,,,,,,
+57,Z,Civil Engineering,x,,,,,Internship; Job,
+58,,,,,,,,,
+59,,,,,,,,,
+60,,,,,,,,,
