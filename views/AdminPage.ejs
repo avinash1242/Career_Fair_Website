@@ -7,8 +7,15 @@
     </head>
 
     <body>
-        <header>
+        <header class="header">
             <a href="#default" class="logo">Portland State University</a>
+            <div class="header-right">
+                <form id="uploadForm" enctype="multipart/form-data" action="/api/photo" method="post">
+                    <a id= "Pages" ><input type="file" accept=".csv" name="userPhoto"/></a>
+                    <a id= "Pages" ><input type="submit" value="Submit" name="submit"></a>
+                    <span id = "status"></span>
+                </form>
+            </div>
         </header>
 
         <main>
@@ -482,6 +489,31 @@
         <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"></script>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script type="text/javascript" src="cfairmap.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+        <script>
+            $(document).ready(function() {
+
+                $('#uploadForm').submit(function() {
+                    $("#status").empty().text("File is uploading...");
+
+                $(this).ajaxSubmit({
+
+                    error: function(xhr) {
+                        status('Error: ' + xhr.status);
+                    },
+
+                    success: function(response) {
+                        console.log(response)
+                        $("#status").empty().text(response);
+                    }
+                });
+
+                return false;
+                });    
+            });
+        </script>
 
     </body>
 </html>
