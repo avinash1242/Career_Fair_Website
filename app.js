@@ -60,12 +60,15 @@ app.post("/submit", (req, res) => {
 //var express = require("express");
 var multer  = require('multer');
 //var app = express();
+var UserData;
 var storage = multer.diskStorage({
   destination: function (req, file, callback) {
-    callback(null, './uploads');
+    callback(null, './AdminData');
   },
   filename: function (req, file, callback) {
-    callback(null, file.fieldname + '-' + Date.now());
+    UserData = file.fieldname + '-' + Date.now() +'.csv';
+    callback(null, UserData);
+    console.log("User file : " + UserData + " Uploaded!");
   }
 });
 var upload = multer({ storage : storage}).single('userPhoto');
@@ -73,9 +76,9 @@ var upload = multer({ storage : storage}).single('userPhoto');
 app.post('/api/photo',function(req,res){
   upload(req,res,function(err) {
     if(err) {
-      return res.end("Error uploading file.");
+      return res.end("Error! Refresh & Try Again!");
     }
-    res.end("File is uploaded");
+    res.end("Success! Refresh to See Changes");
   });
 });
 
