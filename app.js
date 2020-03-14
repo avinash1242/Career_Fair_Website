@@ -4,7 +4,6 @@ const path = require("path");
 const MongoClient = require("mongodb").MongoClient;
 const bodyParser = require("body-parser");
 
-
 // initialising the app
 const app = express();
 
@@ -14,6 +13,7 @@ const PORT = process.env.PORT || 5000;
 //url for mongodb connection
 const url = process.env.MONGODB_URI;
 
+//API Key
 const KG_API_KEY = process.env.API_KEY;
 
 //Middleware to run when any call is made
@@ -31,7 +31,6 @@ app.get("/", (req, res) => {
 });
 
 //LOGIN page--------------------------------------------------------------------------------
-//get
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "public/login.html"));
 });
@@ -84,6 +83,7 @@ var storage = multer.diskStorage({
 
     const jsonObj = csvjson.toObject(fileContent);
       
+    //Connecting to DB to delete previous data and insert new user data  
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
       if (err) throw err;
       client
