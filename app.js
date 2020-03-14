@@ -58,7 +58,7 @@ app.post("/submit", (req, res) => {
   });
 });
 
-//Uploading File and Submitting
+//Uploading File, Submitting and Writing the DB with new data
 var multer  = require('multer');
 var UserData;
 var UserDataAddress;
@@ -73,9 +73,6 @@ var storage = multer.diskStorage({
     callback(null, UserData);
     console.log("User file : " + UserData + " Uploaded!");
 
-
-//check from here
-
     const csvjson = require('csvjson');
     const readFile = require('fs').readFile;
 
@@ -86,23 +83,24 @@ var storage = multer.diskStorage({
         }
 
     const jsonObj = csvjson.toObject(fileContent);
-    console.log(jsonObj);
       
     MongoClient.connect(url, { useUnifiedTopology: true }, function(err, client) {
       if (err) throw err;
       client
       .db("cfairdb")
       .collection("companies")
+      .deleteMany();
+
+      client
+      .db("cfairdb")
+      .collection("companies")
       .insertMany(jsonObj, function(err, res) {
           if (err) throw err;
-          console.log(res.insertedCount+" documents inserted");
         });
 
       });
   
-    });
-
-// Check Ends Here here    
+    });  
   }
 });
 
