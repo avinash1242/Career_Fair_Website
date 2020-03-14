@@ -4,7 +4,6 @@ const path = require("path");
 const MongoClient = require("mongodb").MongoClient;
 const bodyParser = require("body-parser");
 
-
 // initialising the app
 const app = express();
 
@@ -97,9 +96,7 @@ var storage = multer.diskStorage({
       .insertMany(jsonObj, function(err, res) {
           if (err) throw err;
         });
-
       });
-  
     });  
   }
 });
