@@ -37,21 +37,25 @@ header a:hover {
 .FairLayout {
   display: grid;
   border: 1px #555555 solid;
-  height: 930px;
-  width:1400px;
+  height: 960px;
+  width:1405px;
   grid-template: repeat(13, 60px) / repeat(19, 60px);
-  grid-gap: 12px;
+  grid-gap: 14px;
 }
 
 .Company {
   background-color: white;
   border: 2px solid #333;
-  width: auto;
-  height: auto;
+  width: 70px;
+  height: 70px;
   color: #222;
   border-radius: 5px;
-  font-size: 12px;
+  font-size: 14px;
   overflow:auto;
+}
+
+#status {
+  color: white;
 }
 
 .B0 {
