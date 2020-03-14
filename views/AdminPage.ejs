@@ -483,6 +483,21 @@
                         <span class="comp-span"><%=companies[57].Number%></span>
                     <% } %>
                 </div>
+
+                <div class= "Company B58">
+                    <% if(companies[58].Employer != '') { %>
+                        <span class="comp-span"><%=companies[58].Employer%></span>
+                    <% } else {%>
+                        <span class="comp-span"><%=companies[58].Number%></span>
+                    <% } %>
+                </div>
+                <div class= "Company B59">
+                    <% if(companies[59].Employer != '') { %>
+                        <span class="comp-span"><%=companies[59].Employer%></span>
+                    <% } else {%>
+                        <span class="comp-span"><%=companies[59].Number%></span>
+                    <% } %>
+                </div>
             </div>
         </main>
 
@@ -496,7 +511,7 @@
             $(document).ready(function() {
 
                 $('#uploadForm').submit(function() {
-                    $("#status").empty().text("File is uploading...");
+                    $("#status").empty().text("File Uploading. Please Wait!");
 
                 $(this).ajaxSubmit({
 
