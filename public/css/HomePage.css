@@ -6,10 +6,6 @@ body {
     font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
 }
 
-.mySlides {
-  display: none
-}
-
 img {
   vertical-align: middle;
 }
@@ -36,6 +32,10 @@ img {
 
 .prev:hover, .next:hover {
   background-color: rgba(0,0,0,0.8);
+}
+
+.mySlides {
+  display: none
 }
 
 .Carousel {
