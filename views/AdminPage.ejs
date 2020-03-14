@@ -504,26 +504,26 @@
 
         <footer class="footer">
             <div class="FooterLinks">
-              <div class="LinksOne">
-                <ul>
-                    <li><a href="https://www.pdx.edu/careers/internship-information-for-students">Internships</a></li>
-                    <li><a href="https://www.pdx.edu/careers/events">WorkShops</a></li>
-                    <li><a href="https://www.pdx.edu/careers/appointments-drop-in">Appointments</a></li>
-                    <li><a href="https://www.pdx.edu/careers/contact">Contact Us</a></li>               
-                </ul>
-              </div>
-              <div class="LinksTwo">
-                <ul>
-                    <li><a href="https://www.linkedin.com/school/portland-state-university/">LinkedIn</a></li>
-                    <li><a href="https://portlandstate.joinhandshake.com/login">Handshake</a></li>
-                    <li><a href="https://www.indeed.com/q-Pdx-jobs.html">Indeed</a></li>
-                </ul>
-              </div>
-           </div>
+                <div class="LinksOne">
+                    <ul>
+                        <li><a href="https://www.pdx.edu/careers/internship-information-for-students">Internships</a></li>
+                        <li><a href="https://www.pdx.edu/careers/events">WorkShops</a></li>
+                        <li><a href="https://www.pdx.edu/careers/appointments-drop-in">Appointments</a></li>
+                        <li><a href="https://www.pdx.edu/careers/contact">Contact Us</a></li>               
+                    </ul>
+                </div>
+                <div class="LinksTwo">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/school/portland-state-university/">LinkedIn</a></li>
+                        <li><a href="https://portlandstate.joinhandshake.com/login">Handshake</a></li>
+                        <li><a href="https://www.indeed.com/q-Pdx-jobs.html">Indeed</a></li>
+                    </ul>
+                </div>
+            </div>
 
-           <div class="Credits">
+            <div class="Credits">
               <p>All Rights Reserved ( <a class="Network" href="https://www.linkedin.com/in/avinashvarmacherukuri/">Avinash Varma</a> & <a class="Network" href="https://www.linkedin.com/in/deepa-varghese/">Deepa Varghese</a> )</p>
-           </div>
+            </div>
         </footer>
 
         <script type="text/javascript" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/textFit.js"></script>
@@ -533,27 +533,23 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
         <script>
-            $(document).ready(function() {
-
+            $(document).ready(function() 
+            {
                 $('#uploadForm').submit(function() {
                     $("#status").empty().text("File Uploading. Please Wait!");
 
                 $(this).ajaxSubmit({
-
                     error: function(xhr) {
                         status('Error: ' + xhr.status);
                     },
-
                     success: function(response) {
                         console.log(response)
                         $("#status").empty().text(response);
                     }
                 });
-
                 return false;
                 });    
             });
         </script>
-
     </body>
 </html>
